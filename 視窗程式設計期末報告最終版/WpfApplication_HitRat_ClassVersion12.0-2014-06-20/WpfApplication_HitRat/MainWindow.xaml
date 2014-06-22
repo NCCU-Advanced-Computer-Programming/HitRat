@@ -1,0 +1,173 @@
+﻿<Window x:Class="WpfApplication_HitRat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HitRat" Height="678" Width="718" Loaded="Window_Loaded" PreviewKeyDown="Window_PreviewKeyDown" Closing="Window_Closing" Background="#FFF1A140" Icon="Images/trickyrat.ico" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid Margin="0" x:Name="g1">
+        <Image Name="imageBG" Source="Images/Grass.jpg" Margin="0,4,0,26"/>
+
+        <DockPanel Margin="60,25,15,40">
+            <Button x:Name="btn1" HorizontalAlignment="Left" Margin="-55,10,0,0" VerticalAlignment="Top" Height="89" Width="101">
+                <Image Source="Images/player1.jpg" Stretch="Fill"/>
+            </Button>
+
+            <Label x:Name="lbP1" Content="Player1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="95" FontSize="20" FontFamily="Snap ITC" VerticalContentAlignment="Center">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFD8E3FB" Offset="1"/>
+                        <GradientStop Color="#FF5C8DF7"/>
+                        <GradientStop Color="#FF3B6EDC" Offset="0.502"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label x:Name="lb1" Content="000" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="50" Width="60" FontSize="25" FontFamily="Old English Text MT" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF9E9E9" Offset="1"/>
+                        <GradientStop Color="#FFFB1B1B"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label Name="timelb" Content="Time:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="130" FontSize="22" Foreground="#FF9514DE" FontFamily="Magneto" VerticalContentAlignment="Center">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF9E9E9" Offset="1"/>
+                        <GradientStop Color="#FFFDDF1E"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label x:Name="lbP2" Content="Player2" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="50" Width="95" FontSize="20" FontFamily="Snap ITC" VerticalContentAlignment="Center">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFD8E3FB" Offset="1"/>
+                        <GradientStop Color="#FF5C8DF7"/>
+                        <GradientStop Color="#FF3B6EDC" Offset="0.502"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label x:Name="lb2" Content="000" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="50" Width="60" FontSize="25" FontFamily="Old English Text MT" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF9E9E9" Offset="1"/>
+                        <GradientStop Color="#FFFB1B1B"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+
+            <Button x:Name="btn2" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="89" Width="101">
+                <Image Source="Images/player2.jpg" Stretch="Fill"/>
+            </Button>
+        </DockPanel>
+
+        <Grid Margin="10,164,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="175*"/>
+                <ColumnDefinition Width="177*"/>
+                <ColumnDefinition Width="166*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="72*"/>
+                <RowDefinition Height="77*"/>
+                <RowDefinition Height="82*"/>
+            </Grid.RowDefinitions>
+            <Button Name="btnHole1" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="145" Height="145" Grid.Row="0" Grid.Column="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                <Image Source="Images/hole.png" Stretch="Fill" Width="140" />
+            </Button>
+            <Button Name="btnHole2" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="145" Height="145" Grid.Row="0" Grid.Column="1" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                <Image Source="Images/hole.png" Stretch="Fill" Width="140" />
+            </Button>
+            <Button Name="btnHole3" HorizontalAlignment="Left" Margin="28.5,10,0,0" VerticalAlignment="Top" Width="145" Height="145" Grid.Row="0" Grid.Column="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                <Image Source="Images/hole.png" Stretch="Fill" Width="140" />
+            </Button>
+            <Button Name="btnHole4" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="145" Height="145" Grid.Row="1" Grid.Column="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                <Image Source="Images/hole.png" Stretch="Fill" Width="140" />
+            </Button>
+            <Button Name="btnHole5" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="145" Height="145" Grid.Row="1" Grid.Column="1" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                <Image Source="Images/hole.png" Stretch="Fill" Width="140" />
+            </Button>
+            <Button Name="btnHole6" HorizontalAlignment="Left" Margin="28.5,10,0,0" VerticalAlignment="Top" Width="145" Height="145" Grid.Row="1" Grid.Column="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                <Image Source="Images/hole.png" Stretch="Fill" Width="140" />
+            </Button>
+            <Button Name="btnHole7" HorizontalAlignment="Left" Margin="26,7,0,0" VerticalAlignment="Top" Width="145" Height="145" Grid.Row="2" Grid.Column="0" Background="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}">
+                <Image Source="Images/hole.png" Stretch="Fill" Width="140" />
+            </Button>
+            <Button Name="btnHole8" HorizontalAlignment="Left" Margin="25,7,0,0" VerticalAlignment="Top" Width="145" Height="145" Grid.Row="2" Grid.Column="1" Background="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}">
+                <Image Source="Images/hole.png" Stretch="Fill" Width="140" />
+            </Button>
+            <Button Name="btnHole9" HorizontalAlignment="Left" Margin="28.5,7,0,0" VerticalAlignment="Top" Width="145" Height="145" Grid.Row="2" Grid.Column="2" Background="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}">
+                <Image Source="Images/hole.png" Stretch="Fill" Width="140" />
+            </Button>
+        </Grid>
+
+        <MediaElement Name="mda" Margin="1004,4,10,627"/>
+
+        <Menu HorizontalAlignment="Left" Height="25" Margin="5,0,0,0" VerticalAlignment="Top" Width="512" Cursor="Hand">
+            <Menu.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FF74428B" Offset="0.25"/>
+                    <GradientStop Color="#FFAA6FC5"/>
+                    <GradientStop Color="#FF8F66BF" Offset="0.575"/>
+                    <GradientStop Color="#FF9C58C3" Offset="1"/>
+                </LinearGradientBrush>
+            </Menu.Background>
+
+            <MenuItem Header="File" RenderTransformOrigin="0.571,1.107"  FontSize="18" FontWeight="Bold" BorderBrush="#FFDC620D" Height="29" Width="88">
+                <MenuItem.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF4DC3F1" Offset="0"/>
+                        <GradientStop Color="#FF16A3D8" Offset="1"/>
+                    </LinearGradientBrush>
+                </MenuItem.Background>
+                <MenuItem.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF01C12" Offset="1"/>
+                        <GradientStop Color="#FFCFCF2D" Offset="1"/>
+                    </LinearGradientBrush>
+                </MenuItem.Foreground>
+                <MenuItem Header="Start" Background="#FFECBEBE" Width="175" FontSize="16" Click="MenuItem_Click_Start"/>
+                <MenuItem Header="Reset" Background="#FFE89E9E" Width="175" FontSize="16" Click="MenuItem_Click_Reset" />
+                <MenuItem Header="One Player" Click="MenuItem_Click_onePlayer" Background="#FFECBEBE" Width="175" FontSize="16" />
+                <MenuItem Header="Two Player" Click="MenuItem_Click_twoPlayer" Background="#FFECBEBE" Width="175" FontSize="16" />
+                <MenuItem Header="High Score" Background="#FFE89E9E" Width="175" FontSize="16" Click="MenuItem_Click" />
+                <MenuItem Header="Exit"  Background="#FFE89E9E" Width="175" FontSize="16" Click="MenuItem_Click_Exit" />
+            </MenuItem>
+
+            <MenuItem Header="Option" Click="MenuItem_Click_Option"  RenderTransformOrigin="0.75,1.138" FontSize="18" FontWeight="Bold" BorderBrush="#FFDC620D" Height="29" Width="88">
+                <MenuItem.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF4DC3F1" Offset="0"/>
+                        <GradientStop Color="#FF16A3D8" Offset="1"/>
+                    </LinearGradientBrush>
+                </MenuItem.Background>
+                <MenuItem.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF01C12" Offset="1"/>
+                        <GradientStop Color="#FFCFCF2D" Offset="1"/>
+                    </LinearGradientBrush>
+                </MenuItem.Foreground>
+            </MenuItem>
+
+            <MenuItem Header="Help" RenderTransformOrigin="0.571,1.107" FontSize="18" FontWeight="Bold" BorderBrush="#FFDC620D" Height="29" Width="88">
+                <MenuItem.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF4DC3F1" Offset="0"/>
+                        <GradientStop Color="#FF16A3D8" Offset="1"/>
+                    </LinearGradientBrush>
+                </MenuItem.Background>
+                <MenuItem.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF01C12" Offset="1"/>
+                        <GradientStop Color="#FFCFCF2D" Offset="1"/>
+                    </LinearGradientBrush>
+                </MenuItem.Foreground>
+                <MenuItem Header="How to play" Click="MenuItem_Click_Howtoplay" FontSize="16" Background="#FFECBEBE" Width="185"/>
+                <MenuItem Header="About us" Click="MenuItem_Click_Aboutbox" FontSize="16" Background="#FFECBEBE" Width="185"/>
+                <MenuItem Header="About Rat" Click="MenuItem_Click_AboutRat" FontSize="16" Background="#FFECBEBE" Width="185"/>
+            </MenuItem>
+
+            <CheckBox Name="ckbMusic" Click="ckbMusic_Click" Content="Music" />
+            <CheckBox Name="ckbSound" Click="ckbSound_Click" Content="Sound" />
+        </Menu>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApplication_HitRat.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="How To Play" Height="400" Width="500" ResizeMode="NoResize">
+    <Grid>
+        <Image Source="Images/1P2P.jpg" Margin="0,0,0,22"/>
+        <Button x:Name="OkPress" Content="BACK" HorizontalAlignment="Left" Margin="329,317,0,0" VerticalAlignment="Top" Width="94" Height="43" FontSize="25" FontWeight="Bold" Foreground="#FFE0962E" Click="OkPress_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FF8F3131" Offset="1"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="1"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="1"/>
+                    <GradientStop Color="#FFCDCDCD" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="GameInfo" Content="Game Info" HorizontalAlignment="Left" Margin="95,316,0,0" VerticalAlignment="Top" Width="151" Height="43" FontSize="25" FontWeight="Bold" Foreground="#FFE0962E" Click="GameInfo_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FF8F3131" Offset="1"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="1"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="1"/>
+                    <GradientStop Color="#FFCDCDCD" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
