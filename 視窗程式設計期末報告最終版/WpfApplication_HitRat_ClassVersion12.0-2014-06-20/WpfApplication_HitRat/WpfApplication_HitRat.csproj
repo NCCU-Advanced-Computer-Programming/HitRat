@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BABCF95B-AD2C-4921-B9A9-84084D0B754E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WpfApplication_HitRat</RootNamespace>
+    <AssemblyName>WpfApplication_HitRat</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\trickyrat.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="TIE.xaml.cs">
+      <DependentUpon>TIE.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="videoWin.xaml.cs">
+      <DependentUpon>videoWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Winner.xaml.cs">
+      <DependentUpon>Winner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Winner2.xaml.cs">
+      <DependentUpon>Winner2.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game Info.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HighScore.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ButtonwithImage.cs" />
+    <Compile Include="ChildWindow.xaml.cs">
+      <DependentUpon>ChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game Info.xaml.cs">
+      <DependentUpon>Game Info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HighScore.xaml.cs">
+      <DependentUpon>HighScore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="TIE.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="videoWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Winner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Winner2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Player1.cs" />
+    <Compile Include="Player2.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\遊戲王決鬥音效 .wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\hole.png" />
+    <Resource Include="Images\Rat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bonus.png" />
+    <Resource Include="Images\bonusHit1.png" />
+    <Resource Include="Images\bonusHit2.png" />
+    <Resource Include="Images\frozen.png" />
+    <Resource Include="Images\frozenHit1.png" />
+    <Resource Include="Images\frozenHit2.png" />
+    <Resource Include="Images\hit1.png" />
+    <Resource Include="Images\hit2.png" />
+    <Resource Include="Images\king.png" />
+    <Resource Include="Images\kingHit1.png" />
+    <Resource Include="Images\kingHit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Grass.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="player1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="player2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\player1.jpg" />
+    <Resource Include="Images\player2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\City.jpg" />
+    <Resource Include="Images\Iceland.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sting.png" />
+    <Resource Include="Images\stingHit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Question.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\trickyrat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\1P2P.jpg" />
+    <Resource Include="Images\Game Info.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameMusic.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hahaha.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hitsound1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotsound2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player1sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player2sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timeup.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundNaruto.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clap.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CountDown.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finalcountdown.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Developer.jpg" />
+    <Resource Include="Images\Ground.jpg" />
+    <Resource Include="Images\Plain.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
